@@ -34,40 +34,7 @@ public class HomeController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
-    /*
-    public async Task<IActionResult> ScanImage(IFormFile foodImage)
-    {
-        if (foodImage != null && foodImage.Length > 0)
-        {
-            // Convert IFormFile to a byte array or a format that Clarifai API expects
-            using var ms = new MemoryStream();
-            foodImage.CopyTo(ms);
-            var fileBytes = ms.ToArray();
-            // Assume your ClarifaiService expects a byte array and returns a task of string for simplicity
-            string result = await _clarifaiService.PredictFoodAsync(fileBytes);
 
-            Console.WriteLine(result);
-           // Process the result here and decide how you want to display it
-
-            var apiResponse = JsonSerializer.Deserialize<ScanResultViewModel>(result, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
-            var viewModel = new ScanResultViewModel();
-
-            foreach (var concept in apiResponse.Outputs[0].Data.Concepts)
-            {
-                viewModel.IdentifiedFoodItems.Add(new FoodItem
-                {
-                    Name = concept.Name,
-                    Value = concept.Value
-                });
-            }
-
-            return View("Index", viewModel);
-            
-
-        }
-        return View("Index"); // Consider redirecting to a different view to show the results
-    }
-    */
 
     public async Task<IActionResult> ScanImage(IFormFile foodImage)
     {
