@@ -41,3 +41,9 @@ Resolved issues with the dotnet-ef tool.
 Ensured compatibility with the targeted framework version.
 8. Database Migration
 Implementation: Performed a database migration to apply the identity schema to PostgreSQL, ensuring correct storage of user accounts and related information.
+9. Azure Deployment
+Deployment: The project is now deployed on Azure.
+Access: The website can be accessed at (https://safergyy.azurewebsites.net)
+10. Google Maps API Integration (Work in Progress)
+Functionality: Integrating maps functionality with the Google Maps API is currently a work in progress.
+Future Updates: More features and enhancements related to maps will be added soon.
